@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+</head>
+<body>
+
+    <h1>Information Display</h1>
+
+    <div id="info">
+        
+    </div>
+
+    <script>
+      
+        const data = {
+            name: { value: "Али", type: "string" },
+            age: { value: 25, type: "number" },
+            isStudent: { value: true, type: "boolean" },
+            ageAsString: { value: "25", type: "string" }
+        };
+
+      
+        function displayData() {
+            const infoDiv = document.getElementById("info");
+            infoDiv.innerHTML = `
+                <p>Аты: ${data.name.value} | Тіпі: ${data.name.type}</p>
+                <p>Жасы: ${data.age.value} | Тіпі: ${data.age.type}</p>
+                <p>Студент пе?: ${data.isStudent.value} | Тіпі: ${data.isStudent.type}</p>
+                <p>Жасы (жол ретінде): ${data.ageAsString.value} | Тіпі: ${data.ageAsString.type}</p>
+            `;
+        }
+
+       
+        displayData();
+    </script>
+
+</body>
+</html>
